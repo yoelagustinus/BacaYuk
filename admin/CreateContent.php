@@ -9,8 +9,7 @@
             'konten' => $_POST['konten'],
             'category'=> $_POST['category'],
             'file' => $_POST['file'],
-
-            
+     
         ]);
         header("Location: index.php");
     }
