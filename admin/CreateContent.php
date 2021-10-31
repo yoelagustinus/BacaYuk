@@ -2,13 +2,22 @@
     require 'header.php';
     require '../config.php';
 
+    
+    
+    
+
     if(isset($_POST['submit'])){
-        $insertOneResult = $collection->message->insertOne([
+        $date= mktime(date("m"),date("d"),date("Y"));
+        $today_date=date("d M Y", $date);
+        date_default_timezone_set('Asia/Jakarta');
+
+        $insertOneResult = $db->post->insertOne([
             
             'title' => $_POST['title'],
             'konten' => $_POST['konten'],
             'category'=> $_POST['category'],
             'file' => $_POST['file'],
+            'created_at' => $today_date
      
         ]);
         header("Location: index.php");
@@ -33,7 +42,7 @@
                     <th scope="row">Title</th>
                     <td>
                         <div class="form-floating">
-                            <textarea class="form-control" name= "title" id="title"></textarea>
+                            <textarea class="form-control" name= "title" id="title" required></textarea>
                         </div>
                     </td>
                 </tr>
@@ -41,7 +50,7 @@
                     <th scope="row">Isi Konten</th>
                     <td>
                         <div class="form-floating">
-                            <textarea class="form-control" name= "konten" id="konten" style="height: 500px"></textarea>
+                            <textarea class="form-control" name= "konten" id="konten" style="height: 500px" required></textarea>
                         </div>
                     </td>
                 </tr>
@@ -50,7 +59,7 @@
                     <td>
                         <div class="form-check">
                             <!-- <input class="form-check-input" type="radio" name="category" id="flexRadioDefault1"> -->
-                            <input class="form-check-input"  id="flexRadioDefault1" type="radio" name="category" <?php if (isset($category) && $category=="kesehatan") echo "checked";?>value="kesehatan">
+                            <input class="form-check-input"  id="flexRadioDefault1" type="radio" name="category" <?php if (isset($category) && $category=="kesehatan") echo "checked";?>value="kesehatan" required>
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Kesehatan
                             </label>
@@ -63,6 +72,7 @@
                                 Pengetahuan
                             </label>
                         </div>
+                        
                         
                     </td>
                 </tr>
