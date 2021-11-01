@@ -82,7 +82,7 @@
                     <th scope="row">Thumbnail Picture</th>
                     <td>
                         <div class="mb-3">
-                            <input class="form-control" accept="image/png, image/jpeg" type="file" name="file" id="formFile">
+                            <input class="form-control" accept="image/png, image/jpeg" type="file" name="file" id="formFile" required>
                         </div>
                     </td>
                 </tr>
