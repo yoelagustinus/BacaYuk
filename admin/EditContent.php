@@ -17,7 +17,7 @@
             '$set' => ['title' => $_POST['title'], 'konten' => $_POST['konten'], 'category' => $_POST['category'],'file' => $_POST['file'],
         ]
         ]);
-        $_SESSION['success'] = "Content '/$content->title/' berhasil diupdate";
+        $_SESSION['success'] = "Content '$content->title' berhasil diupdate";
         header("Location: index.php");
      }
     
