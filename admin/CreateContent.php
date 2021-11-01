@@ -20,7 +20,7 @@
             'created_at' => $today_date
      
         ]);
-        $_SESSION['success'] = "Content '/$content->title/' berhasil dibuat";
+        $_SESSION['success'] = "Content '" .  $_POST['title'] . "' berhasil dibuat";
         header("Location: index.php");
     }
 
