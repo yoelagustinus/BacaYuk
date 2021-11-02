@@ -9,16 +9,32 @@
         ]);
     }
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['update'])){
+        
+        
+        if($_FILES['file']) {
+            if(move_uploaded_file($_FILES['file']['tmp_name'], '../upload/'.$_FILES['file']['name'])) {
+                $new_files = $_FILES['file']['name'];
+            } else {
+                echo "Failed to upload file.";
+            }
+        }
+
+        $data = [
+            '$set' => [
+                'title' => $_POST['title'], 
+                'konten' => $_POST['konten'], 
+                'category' => $_POST['category'],
+                'fileName' => $new_files,
+            ]
+        ];
+
         $db->post->updateOne([
             '_id' => new MongoDB\BSON\ObjectID($_GET['ContentId'])
-        ],
-        [
-            '$set' => ['title' => $_POST['title'], 'konten' => $_POST['konten'], 'category' => $_POST['category'],'file' => $_POST['file'],
-        ]
-        ]);
+        ], $data);
+
         $_SESSION['success'] = "Content '$content->title' berhasil diupdate";
-        header("Location: index.php");
+        // header("Location: index.php");
      }
     
 
@@ -29,7 +45,7 @@
     <br>
     <p class="fs-4">Edit <?php echo $content->title ?></p>
     <form method="POST">
-        <table class="table">
+        <table class="table" action="" enctype="multipart/form-data">
             <thead>
                 <tr>
                     <th scope="col">Coloumn</th>
@@ -92,8 +108,11 @@
                 <tr>
                     <th scope="row">Thumbnail Picture</th>
                     <td>
-                        <div class="mb-3">
-                            <input class="form-control" type="file" accept="image/png, image/jpeg" name="file" id="formFile">
+                        <div class="col-md-12">
+                            <?php echo '<img src="../images_thumb/'.$content['fileName'].'" width="180">'; ?>
+                            <br>
+                            <br>
+                            <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required>
                         </div>
                     </td>
                 </tr>
@@ -102,7 +121,7 @@
         </table>
 
 
-        <input type="submit" name="submit" value="Create" class="btn btn-success">
+        <button id="update" name="update" class="btn btn-success">Update</button>
 
     </form>
 
