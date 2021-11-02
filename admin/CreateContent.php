@@ -2,24 +2,29 @@
     require 'header.php';
     require '../config.php';
 
-    
-    
-    
-
-    if(isset($_POST['submit'])){
+    if(isset($_POST['create'])){
         $date= mktime(date("m"),date("d"),date("Y"));
         $today_date=date("d M Y", $date);
         date_default_timezone_set('Asia/Jakarta');
 
-        $insertOneResult = $db->post->insertOne([
-            
+        $data = [
             'title' => $_POST['title'],
             'konten' => $_POST['konten'],
             'category'=> $_POST['category'],
-            'file' => $_POST['file'],
-            'created_at' => $today_date
-     
-        ]);
+            'created_at' => $today_date,
+        ];
+
+        //Upload File Images
+        if($_FILES['file']) {
+            if(move_uploaded_file($_FILES['file']['tmp_name'], '../images_thumb/'.$_FILES['file']['name'])) {
+                $data['fileName'] = $_FILES['file']['name'];
+            } else {
+                echo "Failed to upload file.";
+            }
+        }
+        
+        $insertOneResult = $db->post->insertOne($data);
+             
         $_SESSION['success'] = "Content '" .  $_POST['title'] . "' berhasil dibuat";
         header("Location: index.php");
     }
@@ -30,7 +35,7 @@
 <div class="container">
     <br>
     <p class="fs-2">Menambah Konten Baru</p>
-    <form action="" method="POST" accept-charset="UTF-8">
+    <form action="" method="POST" enctype="multipart/form-data">
         <table class="table">
             <thead>
                 <tr>
@@ -81,9 +86,9 @@
                 <tr>
                     <th scope="row">Thumbnail Picture</th>
                     <td>
-                        <div class="mb-3">
-                            <input class="form-control" accept="image/png, image/jpeg" type="file" name="file" id="formFile" required>
-                        </div>
+                        <div class="col-md-12">
+						    <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required>
+						</div>
                     </td>
                 </tr>
 
@@ -91,7 +96,7 @@
         </table>
 
 
-        <input type="submit" name="submit" value="Create" class="btn btn-success">
+        <button id="create" name="create" class="btn btn-success">Create</button>
 
     </form>
 
