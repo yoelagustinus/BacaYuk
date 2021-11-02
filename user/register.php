@@ -19,8 +19,8 @@
                     <div class="card" style="width: 30rem;">
                         <div class="card-body"><h4>Register account</h4>
                             <div class="mb-3">
-                                <label for="exampleInputPassword" class="form-label">Name</label>
-                                <input type="password" class="form-control" id="exampleInputPassword">
+                                <label for="exampleInputName" class="form-label">Name</label>
+                                <input type="name" class="form-control" id="exampleInputName">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail" class="form-label">Email address</label>
@@ -31,8 +31,8 @@
                                 <input type="password" class="form-control" id="exampleInputPassword">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputVerification" class="form-label">Verification Password</label>
-                                <input type="passwordverification" class="form-control" id="exampleInputVerification">
+                                <label for="exampleInputPassword" class="form-label">Verification Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword">
                             </div>
                             <a href="home.php" type="submit" class="btn btn-primary">Register</a>
                             <div class="link-register d-flex flex-row-reverse bd-highlight">

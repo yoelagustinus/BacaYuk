@@ -19,7 +19,7 @@
                     <div class="card" style="width: 30rem;">
                         <div class="card-body"><h4>Login account</h4>
                             <div class="mb-3">
-                                <label for="exampleInputEmail" class="form-label">Username</label>
+                                <label for="exampleInputEmail" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
