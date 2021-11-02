@@ -58,7 +58,7 @@
                 <div class="d-flex justify-content-center mb-2">
                     <div class="mx-auto mb-4" style="width: 650px;">
                         <div class="card" style="width: 40rem;">
-                        <img src="img/home-image.jpg" class="card-img-top" alt="...">
+                        <img src="../images_thumb/home-image.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem totam</p>
                             </div>

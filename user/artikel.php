@@ -56,7 +56,7 @@
             <!-- artikel -->
             <div class="container p-4">
                 <div class="d-flex justify-content-center mb-3">
-                    <img src="img/anak-kecil.jpg" width="500" class="img-fluid" alt="">
+                    <img src="../images_article/anak-kecil.jpg" width="500" class="img-fluid" alt="">
                 </div>
                 <h4 class="mb-3 text-center">Kenali Gejala HIV pada Anak</h4>
                 <p>Ada beberapa gejala dan tanda HIV pada anak yang sudah mulai terlihat sejak tahun pertama kehidupannya. Ini meliputi gejala awal yang ringan hingga gejala infeksi parah yang sering kambuh. Gejala ini patut diantisipasi jika anak terlahir dari orang tua yang memiliki infeksi HIV dan tidak mendapatkan pengobatan.
