@@ -33,7 +33,12 @@
                         <div class="col">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?php echo $post->title ?></h5>
+                                    <h5 class="card-title">
+                                        <?php
+                                        echo "<a href='Content.php?ContentId=$id_content&' class='text-decoration-none'>$post->title</a>"; 
+                                        ?>
+                                    </h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $post->category ?></h6>
                                     <p>
                                         <?php 
                                     echo cutString($post->konten);
