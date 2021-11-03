@@ -35,7 +35,7 @@
 
         $_SESSION['success'] = "Content '$content->title' berhasil diupdate";
         // header("Location: index.php");
-     }
+    }
     
 
 ?>
