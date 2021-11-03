@@ -10,6 +10,7 @@
             '.$_SESSION['success'].'
             </div>
         </div>';
+        session_unset();
     }
 ?>
 
