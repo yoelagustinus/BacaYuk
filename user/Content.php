@@ -20,6 +20,7 @@
         ?>
     </div>
     <h4 class="mb-3 text-center"><?php echo $content->title ?></h4>
+    <p class="fw-light text-center"><?php echo $content->category ?></p>
     <p>
         <?php
             echo $content->konten;
