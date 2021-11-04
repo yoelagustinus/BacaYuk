@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require 'config.php';
 
     if (isset($_SESSION['success_register'])) {
             
@@ -13,6 +14,28 @@
     }
 
     
+    if(isset($_POST['login'])){
+        $email = $_POST['email']; 
+        $password = $_POST['password'];
+       
+        echo "$email<br>$hashed_password";
+        
+        $user = $db->users->findOne([
+            'email' => $email,
+        ]);
+        
+        
+        if(password_verify($password, $user->password)){
+            $_SESSION['email'] = $email;
+                header("Location: visitor/home.php");
+        }else{
+            echo '<script language="javascript">
+            window.alert("Email atau Password SALAH!");
+            window.location.href="index.php";
+            </script>';
+        }
+    }
+
 
 ?>
 
@@ -31,18 +54,18 @@
     <body>
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <form>
+        <form action="" method="post">
             <div class="position-absolute top-50 start-50 translate-middle">
                 <div class="container">
                     <div class="card" style="width: 30rem;">
                         <div class="card-body"><h4>Login account</h4>
                             <div class="mb-3">
                                 <label for="exampleInputEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" required>
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail" aria-describedby="emailHelp" required>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword" required>
+                                <input type="password" class="form-control" name="password" id="exampleInputPassword" required>
                             </div>
                             <button id="login" name="login" class="btn btn-primary">Login</button>
                             <div class="link-register d-flex flex-row-reverse bd-highlight">

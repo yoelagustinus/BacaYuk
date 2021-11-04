@@ -49,7 +49,7 @@
                                         </svg>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="../index.php">Logout</a></li>
+                                        <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>    
