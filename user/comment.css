@@ -1,14 +1,14 @@
 body {
-    background-color: #eee
+    background-color: #fff;
 }
 
 .card {
-    background-color: #fff;
+    background-color: #fafafa;
     border: none
 }
 
 .form-color {
-    background-color: #fafafa
+    background-color: #fafafa;
 }
 
 .form-control {

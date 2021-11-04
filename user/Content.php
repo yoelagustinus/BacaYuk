@@ -36,7 +36,6 @@
         </div>
         <div class="user-desc">
             <h6>Username</h6>
-            <p>Terimakasih artikelnya sangat bermanfaat</p>
         </div>
     </div>    
     <div class="comment" style="width: 50rem;">
