@@ -27,7 +27,8 @@
         
         if(password_verify($password, $user->password)){
             $_SESSION['email'] = $email;
-                header("Location: visitor/home.php");
+            $_SESSION['loggedin'] = true;
+            header("Location: visitor/home.php");
         }else{
             echo '<script language="javascript">
             window.alert("Email atau Password SALAH!");
