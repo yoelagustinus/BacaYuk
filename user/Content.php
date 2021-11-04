@@ -11,7 +11,7 @@
     $thumbnail = $content->fileName;
 ?>
 
-
+<link rel="stylesheet" href="comment.css" media="screen">
 <!-- artikel -->
 <div class="container p-4">
     <div class="d-flex justify-content-center mb-3">
@@ -49,4 +49,28 @@
             <a href="#" type="submit" class="btn btn-primary">Submit</a>
         </div>
     </div>
+	<div class="container mt-5 mb-5">
+        <div class="row height d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="p-3">
+                        <center><h6>Comments</h6></center>
+                    </div>
+                    <div class="mt-3 d-flex flex-row align-items-center p-3 form-color"> <img src="../images_thumb/tztz.jpeg" width="50" class="rounded-circle mr-2"> <input type="text" class="form-control" placeholder="Enter your comment..."> </div>
+					<a href="#" type="submit" class="btn btn-outline-warning">POST!</a>
+                    <div class="mt-2">
+                        <div class="d-flex flex-row p-3"> <img src="../images_thumb/face.jpg" width="40" height="40" class="rounded-circle mr-3">
+                            <div class="w-100">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row align-items-center"> <span class="mr-2"><b>ASEP CILOQ</b></span> <small class="c-badge">Top Comment</small> </div>
+                                </div>
+                                <p class="text-justify comment-text mb-0">MANTAB GANN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
 </div>
