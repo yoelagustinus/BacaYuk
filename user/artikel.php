@@ -49,15 +49,15 @@
 
             <!-- komentar -->
             <h5 class="mb-3">1 Komentar</h5>    
-            <div class="container">
+            <!-- <div class="container"> -->
                 <div class="user-profile">
                     <img src="../images_thumb/profil.png" width="30">
                 </div>    
-                <div class="user-desc">
-                    <h6 class="d-flex justify-content-start">Username</h6>
+                <div class="user-desc float-left">
+                    <h6>Username</h6>
                     <p>Terimakasih artikelnya sangat bermanfaat</p>
                 </div>
-            </div>
+            <!-- </div> -->
             <div class="comment" style="width: 50rem;">
                 <div class="form-floating mb-3">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
