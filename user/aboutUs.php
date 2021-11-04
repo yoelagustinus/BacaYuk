@@ -2,8 +2,14 @@
     <body>
         <?php include 'headerUser.php';?>
         <div class="container p-3">
-            <img src="../images_thumb/membaca.jpg" width="500" class="img-thumbnail mb-3" alt="...">
-            <h3 class="mb-1">Baca Yuk</h3>
+            <div class="d-flex justify-content-center mb-2">
+                <div class="mx-auto mb-4" style="width: 650px;">
+                    <div class="card" style="width: 40rem;">
+                        <img src="../images_thumb/membaca.jpg" width="500" class="card-img-top" alt="...">
+                    </div>
+                </div>
+            </div>
+            <center><h3 class="mb-1">Baca Yuk</h3></center><br>
             <p>Membaca merupakan kegiatan melihat tulisan bacaan dan proses memahami isi teks dengan bersuara atau dalam hati. 
                 Membaca adalah mengungkapkan suatu imajinasi terhadap suatu pembaca yang disukai khalayak ramai dan juga dimengerti 
                 oleh seseorang yang dicintai. Membaca menjadi salah satu jenis kemampuan berbahasa melalui tulisan yang bersifat reseptif 

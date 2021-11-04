@@ -12,20 +12,20 @@
     if(isset($_POST['update'])){
         
         
-        if($_FILES['file']) {
-            if(move_uploaded_file($_FILES['file']['tmp_name'], '../upload/'.$_FILES['file']['name'])) {
-                $new_files = $_FILES['file']['name'];
-            } else {
-                echo "Failed to upload file.";
-            }
-        }
+        // if($_FILES['file']) {
+        //     if(move_uploaded_file($_FILES['file']['tmp_name'], '../upload/'.$_FILES['file']['name'])) {
+        //         $new_files = $_FILES['file']['name'];
+        //     } else {
+        //         echo "Failed to upload file.";
+        //     }
+        // }
 
         $data = [
             '$set' => [
                 'title' => $_POST['title'], 
                 'konten' => $_POST['konten'], 
                 'category' => $_POST['category'],
-                'fileName' => $new_files,
+                
             ]
         ];
 
@@ -35,7 +35,7 @@
 
         $_SESSION['success'] = "Content '$content->title' berhasil diupdate";
         // header("Location: index.php");
-     }
+    }
     
 
 ?>
@@ -112,7 +112,7 @@
                             <?php echo '<img src="../images_thumb/'.$content['fileName'].'" width="180">'; ?>
                             <br>
                             <br>
-                            <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required>
+                            <!-- <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required> -->
                         </div>
                     </td>
                 </tr>
