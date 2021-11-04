@@ -8,7 +8,10 @@
             <div class="d-flex justify-content-center mb-3">
                 <img src="../images_thumb/anak-kecil.jpg" width="500" class="img-fluid" alt="">
             </div>
-            <h4 class="mb-3 text-center">Kenali Gejala HIV pada Anak</h4>
+            <center>
+                <h4 class="mb-3 text-center">Kenali Gejala HIV pada Anak</h4>
+                <p class="text-muted">04 Nov 2021</p>
+            </center>
             <p>Ada beberapa gejala dan tanda HIV pada anak yang sudah mulai terlihat sejak tahun pertama kehidupannya. Ini meliputi gejala awal yang ringan hingga gejala infeksi parah yang sering kambuh. Gejala ini patut diantisipasi jika anak terlahir dari orang tua yang memiliki infeksi HIV dan tidak mendapatkan pengobatan.
                 Menurut data Kementerian Kesehatan Republik Indonesia, sekitar 3 persen dari penderita HIV-AIDS di Indonesia adalah anak-anak berusia di bawah 14 tahun. Lebih dari 90% bayi dan anak-anak yang terinfeksi HIV tersebut tertular dari ibunya pada masa kehamilan, saat persalinan, atau melalui ASI.
             </p>
@@ -45,17 +48,16 @@
             </p>
 
             <!-- komentar -->
-            <h5 class="mb-3">1 Komentar</h5>
-            <div class="user-profil">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                </svg>
+            <h5 class="mb-3">1 Komentar</h5>    
+            <div class="container">
+                <div class="user-profile">
+                    <img src="../images_thumb/profil.png" width="30">
+                </div>    
+                <div class="user-desc">
+                    <h6 class="d-flex justify-content-start">Username</h6>
+                    <p>Terimakasih artikelnya sangat bermanfaat</p>
+                </div>
             </div>
-            <div class="user-desc">
-                <h6>Username</h6>
-                <p>Terimakasih artikelnya sangat bermanfaat</p>
-            </div>  
             <div class="comment" style="width: 50rem;">
                 <div class="form-floating mb-3">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
