@@ -1,6 +1,6 @@
 <html>
     <body>
-        <?php include 'headerUser.php';?>
+        <?php include 'headerVisitor.php';?>
         <div class="container p-3">
             <div class="d-flex justify-content-center mb-2">
                 <div class="mx-auto mb-4" style="width: 650px;">
