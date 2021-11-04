@@ -17,7 +17,7 @@
                 diketahui sebelumnya. Kegiatan membaca bukan sekedar aktivitas yang bersifat pasif dan respektif saja, melainkan menghendaki 
                 pembaca untuk aktif berpikir ketika sedang melihat kata-kata yang terdapat di dalam buku. 
             </p>
-            <p>Untuk mewujudkan hal-hal yang ada disini maka kami membangun sebuah website untuk membaca secara online agar para user memiliki 
+            <p>Untuk mewujudkan hal-hal yang ada disini maka kami membangun sebuah website untuk membaca secara online agar para Pembaca memiliki 
                 kemudahan dalam membaca dimana saja. Disini kami menggunakan database mongoDB, mongoDB adalah salah satu jenis database NoSQL 
                 yang cukup populer digunakan dalam pengembangan website. Berbeda dengan database jenis SQL yang menyimpan data menggunakan relasi tabel, 
                 MongoDB menggunakan dokumen dengan format JSON. 
