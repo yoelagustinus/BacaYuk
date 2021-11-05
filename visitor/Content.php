@@ -20,7 +20,7 @@
         ?>
     </div>
     <h4 class="mb-3 text-center"><?php echo $content->title ?></h4>
-    <p class="fw-light text-center"><?php echo $content->category ?></p>
+    <p class="fw-light text-center"><?php echo $content->category ?> / 04 Nov 2021</p>
     <p>
         <?php
             echo $content->konten;
