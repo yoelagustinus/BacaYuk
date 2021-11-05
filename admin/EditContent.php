@@ -4,7 +4,7 @@
     
     require 'ControllerAdmin.php';
     
-    sessionCheck();
+    
 
     if(isset($_GET['ContentId'])){
         $content = $db->post->findOne([
