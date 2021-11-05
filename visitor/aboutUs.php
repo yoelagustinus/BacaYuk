@@ -9,7 +9,7 @@
                     </div>
                 </div>
             </div>
-            <center><h3 class="mb-1">Baca Yuk</h3></center><br>
+            <center><h3 class="mb-1">Baca Yuk &trade;</h3></center><br>
             <p>Membaca merupakan kegiatan melihat tulisan bacaan dan proses memahami isi teks dengan bersuara atau dalam hati. 
                 Membaca adalah mengungkapkan suatu imajinasi terhadap suatu pembaca yang disukai khalayak ramai dan juga dimengerti 
                 oleh seseorang yang dicintai. Membaca menjadi salah satu jenis kemampuan berbahasa melalui tulisan yang bersifat reseptif 
@@ -24,10 +24,10 @@
             </p>
             <p> Kelompok kami beranggota 4 orang yaitu:
                 <ul>
-                    <li>Johanes Victor</li>
-                    <li>Femi Elice</li>
-                    <li>Reynold Yehezkiel</li>
-                    <li>Yoel Agustinus</li>
+                    <li>1118019 - Johanes victor &spades;</li>
+                    <li>1118042 - Yoel Agustinus &diams;</li>
+                    <li>1118044 - Reynold &hearts;</li>
+                    <li>1118050 - Femi Elice &clubs;</li>
                 </ul>
             </p>    
         </div>
