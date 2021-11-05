@@ -24,11 +24,21 @@
             'email' => $email,
         ]);
         
-        
+        $type_users = $user->type;
+
         if(password_verify($password, $user->password)){
             $_SESSION['email'] = $email;
             $_SESSION['loggedin'] = true;
-            header("Location: visitor/home.php");
+
+            if($type_users == "visitor"){
+                header("Location: visitor/home.php");
+            }else if($type_users == "admin"){
+                header("Location: admin/index.php");
+            }else{
+                session_destroy();
+                header("Location: index.php");
+            }
+            
         }else{
             echo '<script language="javascript">
             window.alert("Email atau Password SALAH!");
