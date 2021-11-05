@@ -24,10 +24,10 @@
             </p>
             <p> Kelompok kami beranggota 4 orang yaitu:
                 <ul>
-                    <li>Johanes Victor &spades;</li>
-                    <li>Femi Elice &diams;</li>
-                    <li>Reynold Yehezkiel &hearts;</li>
-                    <li>Yoel Agustinus &clubs;</li>
+                    <li>1118019 - Johanes victor &spades;</li>
+                    <li>1118042 - Yoel Agustinus &diams;</li>
+                    <li>1118044 - Reynold &hearts;</li>
+                    <li>1118050 - Femi Elice &clubs;</li>
                 </ul>
             </p>    
         </div>
