@@ -8,7 +8,7 @@
                 include 'headerVisitor.php';
 
                 include 'ControllerVisitor.php';
-                sessionCheck();  
+                
 
                 require '../config.php';
                 

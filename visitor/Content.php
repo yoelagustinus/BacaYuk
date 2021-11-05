@@ -2,7 +2,7 @@
     include 'headerVisitor.php';
     require '../config.php';
     include 'ControllerVisitor.php';
-    sessionCheck();    
+   
     
     if(isset($_GET['ContentId'])){
         $content = $db->post->findOne([

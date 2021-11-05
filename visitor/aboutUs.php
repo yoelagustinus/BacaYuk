@@ -2,7 +2,7 @@
     <body>
         <?php include 'headerVisitor.php';
             include 'ControllerVisitor.php';
-            sessionCheck();
+            
         ?>
         <div class="container p-3">
             <div class="d-flex justify-content-center mb-2">
