@@ -30,11 +30,8 @@
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="">Page 2</a>
             </li>
-            <!-- <li>
-              <a class="nav-link" aria-current="page" href="profile.php">Edit Profile</a>
-            </li> -->
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="">Logout</a>
+              <a class="nav-link" aria-current="page" href="../index.php">Logout</a>
             </li>
           </ul>
           </div>
