@@ -2,6 +2,8 @@
     include 'headerVisitor.php';
     require '../config.php';
     require 'ControllerVisitor.php';
+    sessionCheck(); 
+    
     $cursor = $db->post->find([
         'category' => 'pengetahuan'
     ]);
