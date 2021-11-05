@@ -1,7 +1,8 @@
 <?php
     include 'headerVisitor.php';
     require '../config.php';
-    
+    include 'ControllerVisitor.php';
+    sessionCheck();    
     
     if(isset($_GET['ContentId'])){
         $content = $db->post->findOne([
@@ -20,7 +21,7 @@
         ?>
     </div>
     <h4 class="mb-3 text-center"><?php echo $content->title ?></h4>
-    <p class="fw-light text-center"><?php echo $content->category ?> / 04 Nov 2021</p>
+    <p class="fw-light text-center"><?php echo $content->category . ' / '. $content->created_at ?></p>
     <p>
         <?php
             echo $content->konten;
