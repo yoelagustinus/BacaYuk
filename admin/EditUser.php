@@ -6,31 +6,26 @@
     
     
 
-    if(isset($_GET['ContentId'])){
-        $content = $db->post->findOne([
-            '_id' => new MongoDB\BSON\ObjectID($_GET['ContentId'])
+    if(isset($_GET['UserId'])){
+        $user = $db->users->findOne([
+            '_id' => new MongoDB\BSON\ObjectID($_GET['UserId'])
         ]);
     }
 
     if(isset($_POST['update'])){
-        
-        
 
         $data = [
             '$set' => [
-                'title' => $_POST['title'], 
-                'konten' => $_POST['konten'], 
-                'category' => $_POST['category'],
-                
+                'type' => $_POST['type'],      
             ]
         ];
 
-        $db->post->updateOne([
-            '_id' => new MongoDB\BSON\ObjectID($_GET['ContentId'])
+        $db->users->updateOne([
+            '_id' => new MongoDB\BSON\ObjectID($_GET['UserId'])
         ], $data);
 
-        $_SESSION['success'] = "Content '$content->title' berhasil diupdate";
-        header("Location: index.php");
+        $_SESSION['success'] = "User '$user->name' berhasil diupdate";
+        header("Location: ViewUser.php");
     }
     
 
@@ -39,7 +34,7 @@
 
 <div class="container">
     <br>
-    <p class="fs-4">Edit <?php echo $content->title ?></p>
+    <p class="fs-4">Edit <?php echo $user->name ?></p>
     <form method="POST">
         <table class="table" action="" enctype="multipart/form-data">
             <thead>
@@ -50,66 +45,54 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Title</th>
+                    <th scope="row">Nama</th>
                     <td>
                         <div class="form-floating">
-                            <textarea class="form-control" name= "title" id="title" style="height:100px;" required><?php echo $content->title ?></textarea>
+                            <?php echo $user->name ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     
-                    <th scope="row">Isi Konten</th>
+                    <th scope="row">Email</th>
                     <td>
                         <div class="form-floating">
-                            <textarea class="form-control" name= "konten"  style='height: 500px' required><?php echo $content->konten ?></textarea>
+                            <?php echo $user->email ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">Kategori Kontent</th>
+                    <th scope="row">Role</th>
                     <td>
                         <div class="form-check">
-                            <!-- <input class="form-check-input" type="radio" name="category" id="flexRadioDefault1"> -->
-                            <input class="form-check-input"  id="flexRadioDefault1" type="radio" name="category" <?php if (isset($category) && $category=="kesehatan") echo "checked";?>value="kesehatan" required
+                            
+                            <input class="form-check-input"  id="flexRadioDefault1" type="radio" name="type" <?php if (isset($type) && $type=="visitor") echo "checked";?>value="visitor" required
                                 <?php
-                                    if($content->category == "kesehatan"){
+                                    if($user->type == "visitor"){
                                         echo "checked";
                                     }
                                 ?>
                             >
                             <label class="form-check-label" for="flexRadioDefault1">
-                                Kesehatan
+                                Visitor
                             </label>
                         </div>
 
                         <div class="form-check">
-                            <!-- <input class="form-check-input" type="radio" name="category" id="flexRadioDefault2"> -->
-                            <input class="form-check-input"  id="flexRadioDefault2" type="radio" name="category" <?php if (isset($category) && $category=="pengetahuan") echo "checked";?>value="pengetahuan"
+                            
+                            <input class="form-check-input"  id="flexRadioDefault2" type="radio" name="type" <?php if (isset($type) && $type=="admin") echo "checked";?>value="admin"
                                 <?php
-                                    if($content->category == "pengetahuan"){
+                                    if($user->type == "admin"){
                                         echo "checked";
                                     }
                                 ?>
                             >
                             <label class="form-check-label" for="flexRadioDefault2">
-                                Pengetahuan
+                                Admin
                             </label>
                         </div>
                         
                         
-                    </td>
-                </tr>
-
-                <tr>
-                    <th scope="row">Thumbnail Picture</th>
-                    <td>
-                        <div class="col-md-12">
-                            <?php echo '<img src="../images_thumb/'.$content['fileName'].'" width="180">'; ?>
-                            <br>
-                            <br>
-                            <!-- <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required> -->
-                        </div>
                     </td>
                 </tr>
 
