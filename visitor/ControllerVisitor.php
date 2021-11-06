@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 function cutString($text){
     if(empty($text)){
         $newText = '';
