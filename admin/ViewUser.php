@@ -36,9 +36,7 @@
 
 <br>
 <div class="container">
-    <!-- <button type="button" class="btn btn-primary">Add New Konten</button> -->
-    <?php echo "<a href='CreateContent.php'><button type='button' class='btn btn-success'>Add New Konten</button></a>"; ?>
-    <br><br>
+    
     <table class="table table-striped">
         <thead>
             <tr>
