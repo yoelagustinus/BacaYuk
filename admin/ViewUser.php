@@ -21,8 +21,8 @@
             '_id' => new MongoDB\BSON\ObjectID($id)
         ]);
     
-        $_SESSION['success'] = "Content telah Berhasil dihapus";
-        header("Location: index.php");
+        $_SESSION['success'] = "User telah Berhasil dihapus";
+        header("Location: ViewUser.php");
     }
 
 ?>
@@ -54,7 +54,7 @@
             
             $users = $db->users->find();
             foreach($users as $user){
-                $id_content = $user->_id;
+                $user_id = $user->_id;
                 
         ?>
                 <tr>
@@ -63,11 +63,11 @@
                     <td><?php echo $user->email ?></td>
                     <td><?php echo $user->type ?></td>
                     <td>
-                        <?php echo "<a href='EditContent.php?ContentId=$id_content&'><button type='button' class='btn btn-primary'>Edit</button></a>"; ?>
+                        <?php echo "<a href='EditUser.php?UserId=$user_id&'><button type='button' class='btn btn-primary'>Edit</button></a>"; ?>
                         <br><br>
                         <form method="POST" action="">
                             <div class="form-group">
-                                <input type="hidden" value="<?php echo $id_content; ?>" class="form-control" name="content_id" id="content_id">
+                                <input type="hidden" value="<?php echo $user_id; ?>" class="form-control" name="user_id" id="user_id">
                                 
                             </div>
                             <button type="submit" name="delete" id="delete" class="btn btn-danger">Hapus</button>
