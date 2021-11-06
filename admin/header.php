@@ -1,3 +1,24 @@
+<?php
+
+require '../config.php';
+session_start();
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: ../index.php");
+    exit;
+}
+if (empty($_SESSION['email'])) {
+    header("Location: ../index.php");
+}
+
+$email = $_SESSION['email'];
+
+$user = $db->users->findOne([
+    'email' => $email,
+]);
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -30,7 +51,7 @@
               <a class="nav-link" aria-current="page" href="index.php">Konten</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="">Page 2</a>
+              <a class="nav-link" aria-current="page" href="EditProfile.php"><?php echo $user->name ?> </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../index.php">Logout</a>
@@ -41,8 +62,3 @@
       </nav>
   </body>
 </html>
-
-<?php
-
-session_start();
-?>
