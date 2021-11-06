@@ -15,13 +15,6 @@
     if(isset($_POST['update'])){
         
         
-        // if($_FILES['file']) {
-        //     if(move_uploaded_file($_FILES['file']['tmp_name'], '../upload/'.$_FILES['file']['name'])) {
-        //         $new_files = $_FILES['file']['name'];
-        //     } else {
-        //         echo "Failed to upload file.";
-        //     }
-        // }
 
         $data = [
             '$set' => [
