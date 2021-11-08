@@ -11,6 +11,7 @@
 
 
 ?>
+<link rel="stylesheet" href="style.css" media="screen">
 <div class="tampilan">
 
     <!-- navbar -->

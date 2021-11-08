@@ -10,6 +10,7 @@
 
 
 ?>
+<link rel="stylesheet" href="style.css" media="screen">
 <!-- Tampilan -->
 <div class="tampilan">
 
