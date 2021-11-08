@@ -32,7 +32,7 @@
             ?>
                 <div class="col">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title">
                                 <?php
                                 echo "<a href='Content.php?ContentId=$id_content&' class='text-decoration-none'>$post->title</a>"; 
@@ -42,9 +42,9 @@
                             <p>
                                 <?php 
                             echo cutString($post->konten);
-                            echo "<a href='Content.php?ContentId=$id_content&' class='text-decoration-none'> Baca selengkapnya</a>";
                             ?>
                             </p>
+							<a href=<?php echo "Content.php?ContentId=$id_content&"?> class='btn btn-primary' style='margin-top: auto'> Baca selengkapnya</a>
                         </div>
                     </div>
                 </div>
