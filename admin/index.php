@@ -1,6 +1,9 @@
 <?php
     require 'header.php';
     require '../config.php';
+    require 'ControllerAdmin.php';
+    
+    sessionCheck();
 
     if (isset($_SESSION['success'])) {
         
@@ -10,7 +13,7 @@
             '.$_SESSION['success'].'
             </div>
         </div>';
-        session_unset();
+        unset($_SESSION["success"]);
     }
 ?>
 

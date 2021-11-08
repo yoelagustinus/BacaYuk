@@ -5,10 +5,13 @@
 
             <!-- navbar -->
             <?php 
-                include 'headerUser.php';
+                include 'headerVisitor.php';
+
+                include 'ControllerVisitor.php';
+                
 
                 require '../config.php';
-                require 'ControllerVisitor.php';
+                
                 $cursor = $db->post->find();
             ?>
 
@@ -19,7 +22,7 @@
                         <div class="card" style="width: 40rem;">
                         <img src="../images_thumb/home-image.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem totam</p>
+                                <p class="card-text">Selamat datang diwebsite "BacaYuk". Website yang memberi informasi seputar pengetahuan dan kesehatan</p>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,9 @@
 <?php
     require 'header.php';
     require '../config.php';
+    require 'ControllerAdmin.php';
+    
+    sessionCheck();
 
     if(isset($_POST['create'])){
         $date= mktime(date("m"),date("d"),date("Y"));

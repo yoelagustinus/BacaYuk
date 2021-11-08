@@ -1,28 +1,28 @@
 <?php 
-    include 'headerUser.php';
+    include 'headerVisitor.php';
     require '../config.php';
     require 'ControllerVisitor.php';
+    
+    
     $cursor = $db->post->find([
-        'category' => 'kesehatan'
+        'category' => 'pengetahuan'
     ]);
 
 
 ?>
+<!-- Tampilan -->
 <div class="tampilan">
-
-    <!-- navbar -->
-    
 
     <!-- konten -->
     <div class="container p-4">
         <div class="d-flex justify-content-center mb-2">
             <div class="mx-auto mb-4" style="width: 650px;">
                 <div class="card" style="width: 40rem;">
-                    <img src="../images_thumb/kesehatan.jpg" class="card-img-top" alt="...">
+                    <img src="../images_thumb/pengetahuan.jpg" class="card-img-top" alt="...">
                 </div>
             </div>
         </div>
-        <center><h2>Kesehatan</h2></center><br>
+        <center><h2>Pengetahuan</h2></center><br>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <?php
                 foreach($cursor as $post){
