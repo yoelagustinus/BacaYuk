@@ -5,24 +5,25 @@
         ?>
         <div class="container p-3">
             <h4 class="mb-2">Profil Anda</h4>
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 35rem;">
                 <div class="card-body">
-                    <div class="row row-cols-auto">
-                        <div class="col">
-                            <img src="../images_thumb/profil.png" width="65" height="65">
-                        </div>
-                        <div class="col mb-3">
-                            <h5 class="mb-2">yumi</h5>
+                    <div class="d-flex flex-row-reverse">
+                        <a href="changeEmail.php" class="text-decoration-none text-muted">Edit Profil</a>
+                    </div>
+                    <center><img src="../images_thumb/profil.png" width="75" height="75"></center>
+                </div>
+                <div class="card-group p-3" style="width: 35rem;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6>Name</h6>
+                            <p class="mb-2">yumi</p>
+                            <h6>Email Address</h6>
                             <p class="mb-2">yumi@gmail.com</p>
-                            <a href="changeEmail.php" class="text-decoration-none text-muted mb-2">Ubah alamat email</a>
+                            <a href="../logout.php" class="text-decoration-none">Logout</a>
                         </div>
                     </div>
-                    <center>
-                        <a href="../logout.php" role="button" class="btn btn-primary btn-sm" style="width: 10rem;">Logout</a>
-                    </center> 
                 </div>
-            </div>
+            </div>            
         </div>
     </body>
 </html>
-
