@@ -12,11 +12,9 @@
 
 ?>
 <div class="tampilan">
-
-    <!-- navbar -->
     
-
     <!-- konten -->
+    <link rel="stylesheet" href="style.css" media="screen">
     <div class="container p-4">
         <div class="d-flex justify-content-center mb-2">
             <div class="mx-auto mb-4" style="width: 650px;">
