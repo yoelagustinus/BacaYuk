@@ -44,6 +44,22 @@
                                 <button id="edit" name="edit" class="btn btn-primary">Simpan Perubahan</button>
                                 <a href="profil.php" name="batal" class="text-muted text-decoration-none p-3">Batal</a>
                             </div>
+                    <div class="card" style="width: 30rem;">
+                        <div class="card-body"><h4>Change email</h4>
+                            <div class="mb-3">
+                                <label for="exampleInputNewEmail" class="form-label">New Email address</label>
+                                <input type="newemail" name="mail" class="form-control" id="exampleInputNewEmail" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword" class="form-label">Password</label>
+                                <input type="password" name="password1" class="form-control" id="exampleInputPassword" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword" class="form-label">Verification Password</label>
+                                <input type="password" name="password2" class="form-control" id="exampleInputPassword" required>
+                            </div>
+                            <button id="register" name="register" class="btn btn-primary">Change</button>
+                            <a href="profil.php" class="text-decoration-none p-3 text-muted">Back</a>
                         </div>
                     </div>
                 </div>   

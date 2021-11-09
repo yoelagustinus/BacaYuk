@@ -11,10 +11,13 @@
 
 
 ?>
+<link rel="stylesheet" href="style.css" media="screen">
 <div class="tampilan">
+
+    <!-- navbar -->
     
+
     <!-- konten -->
-    <link rel="stylesheet" href="style.css" media="screen">
     <div class="container p-4">
         <div class="d-flex justify-content-center mb-2">
             <div class="mx-auto mb-4" style="width: 650px;">
@@ -40,7 +43,7 @@
                             </h5>
                             <h6 class="card-subtitle mb-2 text-muted"><?php echo $post->category ?></h6>
                             <p>
-                            <?php 
+                                <?php 
                             echo cutString($post->konten);
                             ?>
                             </p>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css" media="screen">
 <html>
     <body>
         <!-- Tampilan -->
@@ -16,7 +17,6 @@
             ?>
 
             <!-- konten -->
-            <link rel="stylesheet" href="style.css" media="screen">
             <div class="container p-4">
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <center>
