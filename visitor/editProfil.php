@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div class="card-group">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body border border-primary">
                                     <div class="mb-3">
                                         <label for="exampleInputName" class="form-label">Name</label>
                                         <input type="name" name="name" class="form-control" id="exampleInputName">
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body border border-primary">
                                     <div class="mb-3">
                                         <label for="exampleInputPassword" class="form-label">Password</label>
                                         <input type="password" name="password1" class="form-control" id="exampleInputPassword">
@@ -46,8 +46,8 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse mb-3">
-                            <button id="register" name="register" class="btn btn-primary">Change</button>
-                            <a href="profil.php" class="text-decoration-none p-3 text-muted">Back</a>
+                            <button id="register" name="register" class="btn mt-auto btn-primary">Change</button>
+                            <a href="profil.php" class="btn mt-auto">Back</a>
                         </div>    
                     </div>
                 </div>
