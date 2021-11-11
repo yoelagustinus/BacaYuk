@@ -44,14 +44,18 @@ $user = $db->users->findOne([
             <!-- navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="home.php">
-                        <img src="../images_thumb/Logo-BacaYuk.png" alt="" width="35" height="40"> BacaYuk
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button> -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- <a class="navbar-brand" href="home.php">
+                            <img src="../images_thumb/Logo-BacaYuk.png" alt="" width="35" height="40"><p class="fw-bold">Baca Yuk</p></img>
+                        </a> -->
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <img src="../images_thumb/Logo-BacaYuk.png" alt="" width="35" height="40">
+                                <a class="navbar-brand fw-bold text-success" href="home.php">Baca Yuk</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="pengetahuan.php">Pengetahuan</a>
                             </li>
@@ -67,7 +71,7 @@ $user = $db->users->findOne([
                                 <li class="nav-item dropdown">
                                     <a class="nav-link text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <?php echo $user->name ?> 
-                                       <img src="../images_thumb/profil.png" width="25" height="25">
+                                       <img src="../images_thumb/tztz.jpeg" class="rounded-circle" width="25" height="25">
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="profil.php">Profil</a></li>
