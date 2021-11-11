@@ -40,30 +40,32 @@ $user = $db->users->findOne([
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand">
-            <img src="../images_thumb/Logo-BacaYuk.png" alt="" width="35" height="40"> BacaYuk  Admin
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.php">Konten</a>
+              <img src="../images/BacaYuk.png" alt="" width="40" height="40">
+              <a class="navbar-brand fw-bold text-success" href="home.php">Baca Yuk</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="ViewUser.php">View User</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Konten</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="EditProfile.php"><?php echo $user->name ?> </a>
+              <a class="nav-link active" aria-current="page" href="ViewUser.php">View User</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.php">Logout</a>
+              <a class="nav-link active" aria-current="page" href="EditProfile.php"><?php echo $user->name ?> </a>
             </li>
           </ul>
+          <div class="d-flex flex-row-reverses">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.php">LOGOUT</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
   </body>
 </html>
