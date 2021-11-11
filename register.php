@@ -9,7 +9,7 @@ session_start();
         $email = $_POST['mail'];
         $pass1 = $_POST['password1'];
         $pass2 = $_POST['password2'];
-        $type = "visitor";
+        
         $check = false;
 
         //check email
@@ -20,12 +20,29 @@ session_start();
             $check = true;
         }
         
+
+        $check_user = $db->users->find();
+        $i = 0;
+    
+        foreach ($check_user as $chk_user) {
+            $i++;
+        }
+
         if($check == true){
             echo '<script language="javascript">
             window.alert("Email sudah terdaftar! Register tidak dapat diproses!");
             window.location.href="register.php";
             </script>';
         }else{
+            if($i==0){
+                //jika belom ada user maka masuk ke admin
+                //type = admin
+                $type = "admin";
+            }else{
+                //jika sudah ada user, maka tipernya visitor
+                $type = "visitor";
+            }
+            
             if($pass1 == $pass2){
                 $password = $pass1;
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
