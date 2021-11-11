@@ -35,11 +35,10 @@ session_start();
             </script>';
         }else{
             if($i==0){
-                //jika belom ada user maka masuk ke admin
-                //type = admin
+                //jika belom ada user maka typenya admin
                 $type = "admin";
             }else{
-                //jika sudah ada user, maka tipernya visitor
+                //jika sudah ada user, maka tipenya visitor
                 $type = "visitor";
             }
             
@@ -111,7 +110,7 @@ session_start();
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputImage" class="form-label">Profile Picture</label>
-						        <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required>
+						        <input id="file" name="file" type="file" placeholder="" class="form-control input-md">
 						    </div>
                             <!-- <a href="home.php" type="submit" class="btn btn-primary">Register</a> -->
                             <button id="register" name="register" class="btn btn-primary">Register</button>
