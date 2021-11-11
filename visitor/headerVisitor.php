@@ -53,7 +53,7 @@ $user = $db->users->findOne([
                         </a> -->
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <img src="../images_thumb/Logo-BacaYuk.png" alt="" width="35" height="40">
+                                <img src="../images_thumb/BacaYuk.png" alt="" width="40" height="40">
                                 <a class="navbar-brand fw-bold text-success" href="home.php">Baca Yuk</a>
                             </li>
                             <li class="nav-item">
