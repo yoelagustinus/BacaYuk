@@ -109,6 +109,10 @@ session_start();
                                 <label for="exampleInputPassword" class="form-label">Verification Password</label>
                                 <input type="password" name="password2" class="form-control" id="exampleInputPassword" required>
                             </div>
+                            <div class="mb-3">
+                                <label for="exampleInputImage" class="form-label">Profile Picture</label>
+						        <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required>
+						    </div>
                             <!-- <a href="home.php" type="submit" class="btn btn-primary">Register</a> -->
                             <button id="register" name="register" class="btn btn-primary">Register</button>
                             <div class="link-register d-flex flex-row-reverse bd-highlight">
