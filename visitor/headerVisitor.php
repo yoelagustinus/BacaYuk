@@ -67,7 +67,7 @@ $user = $db->users->findOne([
                                     <?php echo $user->name ?> 
                                        <img src="../images_thumb/tztz.jpeg" class="rounded-circle" width="25" height="25">
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="profil.php">Profil</a></li>
                                         <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
                                     </ul>

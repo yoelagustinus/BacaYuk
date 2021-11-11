@@ -60,10 +60,10 @@ $user = $db->users->findOne([
           <div class="d-flex flex-row-reverses">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.php">LOGOUT</a>
+                <a class="nav-link active" aria-current="page" href="../index.php">Logout</a>
               </li>
-            </ul>
-          </div>
+              </ul>
+          </div> 
         </div>
       </div>
     </nav>
