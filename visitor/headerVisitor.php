@@ -18,6 +18,8 @@ $user = $db->users->findOne([
     'email' => $email,
 ]);
 
+$pg_category = $db->category->find();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -50,12 +52,24 @@ $user = $db->users->findOne([
                                 <img src="../images/BacaYuk.png" alt="" width="40" height="40">
                                 <a class="navbar-brand fw-bold text-success" href="home.php">Baca Yuk</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="pengetahuan.php">Pengetahuan</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="kesehatan.php">Kesehatan</a>
+                            </li> -->
+                            <?php
+                            foreach($pg_category as $pg){
+                                $category_name = $pg->category;
+                            ?>
+                            <li class="nav-item">
+                            <?php 
+                                echo "<a class='nav-link active' aria-current='page' href='page.php?CategoryName=$category_name&'>$category_name </a>";
+                            ?>
                             </li>
+                            <?php
+                            }
+                            ?>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="aboutUs.php">About Us</a>
                             </li>
