@@ -91,7 +91,7 @@
                 <label for="floatingTextarea2">Beri komentar disini...</label>
             </div>
             <div class="button">
-                <a href="home.php" type="submit" class="btn">Kembali</a>
+                
                 <button id="post_comment" name="post_comment" class="btn btn-primary">Post Komentar</button>
             </div>
         </div>
