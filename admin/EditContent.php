@@ -31,7 +31,7 @@
         header("Location: index.php");
     }
     
-
+    $select_category = $db->category->find();
 ?>
 
 
@@ -42,7 +42,7 @@
         <table class="table" action="" enctype="multipart/form-data">
             <thead>
                 <tr>
-                    <th scope="col">Coloumn</th>
+                    <th scope="col" style='width: 200px'>Coloumn</th>
                     <th scope="col">Value</th>
                 </tr>
             </thead>
@@ -67,34 +67,21 @@
                 <tr>
                     <th scope="row">Kategori Kontent</th>
                     <td>
-                        <div class="form-check">
-                            <!-- <input class="form-check-input" type="radio" name="category" id="flexRadioDefault1"> -->
-                            <input class="form-check-input"  id="flexRadioDefault1" type="radio" name="category" <?php if (isset($category) && $category=="kesehatan") echo "checked";?>value="kesehatan" required
-                                <?php
-                                    if($content->category == "kesehatan"){
-                                        echo "checked";
-                                    }
-                                ?>
-                            >
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Kesehatan
-                            </label>
-                        </div>
-
-                        <div class="form-check">
-                            <!-- <input class="form-check-input" type="radio" name="category" id="flexRadioDefault2"> -->
-                            <input class="form-check-input"  id="flexRadioDefault2" type="radio" name="category" <?php if (isset($category) && $category=="pengetahuan") echo "checked";?>value="pengetahuan"
-                                <?php
-                                    if($content->category == "pengetahuan"){
-                                        echo "checked";
-                                    }
-                                ?>
-                            >
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Pengetahuan
-                            </label>
-                        </div>
+                        <?php
+                            echo "<b>$content->category</b>";
+                            foreach($select_category as $ctgry){
+                                $nama_ctgry = $ctgry->category;
+                        ?>
                         
+                            <div class="form-check">
+                                <input class="form-check-input"  id="flexRadioDefault1" type="radio" name="category" <?php if (isset($category) && $category==$nama_ctgry) echo "checked";?>value=<?php echo $nama_ctgry?> required>
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <?php echo $nama_ctgry?>
+                                </label>
+                            </div>
+                        <?php
+                            }
+                        ?> 
                         
                     </td>
                 </tr>
