@@ -44,8 +44,12 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </center>    
+                    </center>
+                    
                 </div>
+                <center>
+                    <h1 class="text-capitalize">Home</h1>
+                </center>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <?php
                         foreach($cursor as $post){
