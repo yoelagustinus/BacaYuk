@@ -64,7 +64,7 @@ $pg_category = $db->category->find();
                             ?>
                             <li class="nav-item">
                             <?php 
-                                echo "<a class='nav-link active' aria-current='page' href='page.php?CategoryName=$category_name&'>$category_name </a>";
+                                echo "<a class='nav-link active' aria-current='page' href='page.php?CategoryName=$category_name&'><p class='text-capitalize'>$category_name</p></a>";
                             ?>
                             </li>
                             <?php
