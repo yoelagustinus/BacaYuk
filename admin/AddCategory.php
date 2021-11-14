@@ -15,6 +15,17 @@
         header("Location: index.php");
     }
 
+    if(isset($_POST['delete'])){
+        $id_category = $_POST['category_id'];
+        
+        $content = $db->post->deleteOne([
+            '_id' => new MongoDB\BSON\ObjectID($id_category)
+        ]);
+    
+        $_SESSION['success'] = "Category telah Berhasil dihapus";
+        header("Location: index.php");
+    }
+
 ?>
 
 <div class="container">
@@ -57,7 +68,13 @@
                         <?php echo $ctgr->category ?>
                     </td>
                     <td>
-                        <button id="delete" name="delete" class="btn btn-danger">Delete Category</button>
+                        <form method="POST" action="">
+                            <div class="form-group">
+                                <input type="hidden" value="<?php echo $id_content; ?>" class="form-control" name="category_id" id="category_id">
+                                
+                            </div>
+                            <button type="submit" name="delete" id="delete" class="btn btn-danger">Hapus</button>
+                        </form>
                     </td>
                 </tr>
                 <?php
