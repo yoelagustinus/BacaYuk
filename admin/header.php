@@ -54,7 +54,7 @@ $user = $db->users->findOne([
               <a class="nav-link active" aria-current="page" href="ViewUser.php">View User</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="AddCategory.php">Add Category</a>
+              <a class="nav-link active" aria-current="page" href="AddCategory.php">View Category</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="EditProfile.php"><?php echo $user->name ?> </a>
