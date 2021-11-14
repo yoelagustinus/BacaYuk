@@ -8,7 +8,7 @@
             <div class="card bg-success" style="width: 50rem; height: 10rem;">
                 <a href="changeEmail.php" class="text-decoration-none text-white p-2 d-flex justify-content-end">Edit Profil</a>
                 <div class="card-body">
-                    <img src="../images/tztz.jpeg" class="rounded-circle" width="100" height="100">
+                    <img src="../images/profil.png" class="rounded-circle" width="100" height="100">
                 </div>
             </div>    
             <div class="card" style="width: 50rem; height: 10rem;">

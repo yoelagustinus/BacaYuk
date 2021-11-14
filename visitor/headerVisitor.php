@@ -79,7 +79,7 @@ $pg_category = $db->category->find();
                                 <li class="nav-item dropdown">
                                     <a class="nav-link text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <?php echo $user->name ?> 
-                                       <img src="../images_thumb/tztz.jpeg" class="rounded-circle" width="25" height="25">
+                                       <img src="../images/profil.png" class="rounded-circle" width="25" height="25">
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="profil.php">Profil</a></li>
