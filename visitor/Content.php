@@ -70,7 +70,7 @@
     ?>
     
     <div class="row row-cols-auto">
-        <div class="col"><img src="../images/tztz.jpeg" class="rounded-circle" width="45" height="45"></div>
+        <div class="col"><img src="../images/profil.png" class="rounded-circle" width="45" height="45"></div>
         <div class="col"><h6><?php echo $comments->comment_sender ?></h6>
             <p><?php echo $comments->text_comment ?></p>
         </div>
