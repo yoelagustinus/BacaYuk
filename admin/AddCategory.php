@@ -37,4 +37,35 @@
         <button id="create" name="create" class="btn btn-success">Create Category</button>
     </form>
 
+    <br><br>
+    <p class="fs-2">List Category</p>
+    
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name Kategori</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $category = $db->categort->find();
+                    foreach($category as $ctgr){
+                ?> 
+                <tr>
+                    <td>
+                        <?php echo $ctgr->category ?>
+                    </td>
+                    <td>
+                        <button id="delete" name="delete" class="btn btn-danger">Delete Category</button>
+                    </td>
+                </tr>
+                <?php
+                    }
+                ?>
+            </tbody>
+        </table>
+        
+    
+    <br><br>
 </div>
