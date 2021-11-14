@@ -18,7 +18,7 @@
     if(isset($_POST['delete'])){
         $id_category = $_POST['category_id'];
         
-        $content = $db->post->deleteOne([
+        $content = $db->category->deleteOne([
             '_id' => new MongoDB\BSON\ObjectID($id_category)
         ]);
     
@@ -60,8 +60,9 @@
             </thead>
             <tbody>
                 <?php
-                    $category = $db->categort->find();
+                    $category = $db->category->find();
                     foreach($category as $ctgr){
+                        $id_category = $ctgr->_id;
                 ?> 
                 <tr>
                     <td>
@@ -70,7 +71,7 @@
                     <td>
                         <form method="POST" action="">
                             <div class="form-group">
-                                <input type="hidden" value="<?php echo $id_content; ?>" class="form-control" name="category_id" id="category_id">
+                                <input type="hidden" value="<?php echo $id_category; ?>" class="form-control" name="category_id" id="category_id">
                                 
                             </div>
                             <button type="submit" name="delete" id="delete" class="btn btn-danger">Hapus</button>
