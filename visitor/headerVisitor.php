@@ -18,6 +18,8 @@ $user = $db->users->findOne([
     'email' => $email,
 ]);
 
+$pg_category = $db->category->find();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,20 +46,30 @@ $user = $db->users->findOne([
             <!-- navbar -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="home.php">
-                        <img src="../images_thumb/Logo-BacaYuk.png" alt="" width="35" height="40"> BacaYuk
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
+                                <img src="../images/BacaYuk.png" alt="" width="40" height="40">
+                                <a class="navbar-brand fw-bold text-success" href="home.php">Baca Yuk</a>
+                            </li>
+                            <!-- <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="pengetahuan.php">Pengetahuan</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="kesehatan.php">Kesehatan</a>
+                            </li> -->
+                            <?php
+                            foreach($pg_category as $pg){
+                                $category_name = $pg->category;
+                            ?>
+                            <li class="nav-item">
+                            <?php 
+                                echo "<a class='nav-link active' aria-current='page' href='page.php?CategoryName=$category_name&'><p class='text-capitalize'>$category_name</p></a>";
+                            ?>
                             </li>
+                            <?php
+                            }
+                            ?>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="aboutUs.php">About Us</a>
                             </li>
@@ -67,9 +79,9 @@ $user = $db->users->findOne([
                                 <li class="nav-item dropdown">
                                     <a class="nav-link text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <?php echo $user->name ?> 
-                                       <img src="../images_thumb/profil.png" width="25" height="25">
+                                       <img src="../images/profil.png" class="rounded-circle" width="25" height="25">
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="profil.php">Profil</a></li>
                                         <li><a class="dropdown-item" href="../logout.php">Logout</a></li>
                                     </ul>

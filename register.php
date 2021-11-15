@@ -9,7 +9,7 @@ session_start();
         $email = $_POST['mail'];
         $pass1 = $_POST['password1'];
         $pass2 = $_POST['password2'];
-        $type = "visitor";
+        
         $check = false;
 
         //check email
@@ -20,12 +20,28 @@ session_start();
             $check = true;
         }
         
+
+        $check_user = $db->users->find();
+        $i = 0;
+    
+        foreach ($check_user as $chk_user) {
+            $i++;
+        }
+
         if($check == true){
             echo '<script language="javascript">
             window.alert("Email sudah terdaftar! Register tidak dapat diproses!");
             window.location.href="register.php";
             </script>';
         }else{
+            if($i==0){
+                //jika belom ada user maka typenya admin
+                $type = "admin";
+            }else{
+                //jika sudah ada user, maka tipenya visitor
+                $type = "visitor";
+            }
+            
             if($pass1 == $pass2){
                 $password = $pass1;
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -92,10 +108,6 @@ session_start();
                                 <label for="exampleInputPassword" class="form-label">Verification Password</label>
                                 <input type="password" name="password2" class="form-control" id="exampleInputPassword" required>
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputImage" class="form-label">Profile Picture</label>
-						        <input id="file" name="file" type="file" placeholder="" class="form-control input-md" required>
-						    </div>
                             <!-- <a href="home.php" type="submit" class="btn btn-primary">Register</a> -->
                             <button id="register" name="register" class="btn btn-primary">Register</button>
                             <div class="link-register d-flex flex-row-reverse bd-highlight">

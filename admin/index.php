@@ -49,44 +49,44 @@
                 <th scope="col">Actions</th>
             </tr>
         </thead>
-    <tbody>
-        <?php
-            
-            $cursor = $db->post->find();
-            foreach($cursor as $post){
-                $id_content = $post->_id;
+        <tbody>
+            <?php
                 
-        ?>
-                <tr>
-                    <!-- <th scope="row">1</th> -->
-                    <td><?php echo $post->title ?></td>
-                    <td><?php echo $post->category ?></td>
-                    <td><?php echo $post->created_at ?></td>
-                    <td>
-                        <?php echo "<a href='EditContent.php?ContentId=$id_content&'><button type='button' class='btn btn-primary'>Edit</button></a>"; ?>
-                        <br><br>
-                        <form method="POST" action="">
-                            <div class="form-group">
-                                <input type="hidden" value="<?php echo $id_content; ?>" class="form-control" name="content_id" id="content_id">
-                                
-                            </div>
-                            <button type="submit" name="delete" id="delete" class="btn btn-danger">Hapus</button>
-                        </form>
+                $cursor = $db->post->find();
+                foreach($cursor as $post){
+                    $id_content = $post->_id;
+                    
+            ?>
+                    <tr>
+                        <!-- <th scope="row">1</th> -->
+                        <td><?php echo $post->title ?></td>
+                        <td><?php echo $post->category ?></td>
+                        <td><?php echo $post->created_at ?></td>
+                        <td>
+                            <?php echo "<a href='EditContent.php?ContentId=$id_content&'><button type='button' class='btn btn-primary'>Edit</button></a>"; ?>
+                            <br><br>
+                            <form method="POST" action="">
+                                <div class="form-group">
+                                    <input type="hidden" value="<?php echo $id_content; ?>" class="form-control" name="content_id" id="content_id">
+                                    
+                                </div>
+                                <button type="submit" name="delete" id="delete" class="btn btn-danger">Hapus</button>
+                            </form>
 
-                        <!-- <?php
-                            echo "<a href='DeleteContent.php?ContentId=$id_content&'><button type='button' class='btn btn-danger'>Delete</button></a>";
-                        ?> -->
-                        
-                        
-                    </td>
-                </tr>
-        <?php
+                            <!-- <?php
+                                echo "<a href='DeleteContent.php?ContentId=$id_content&'><button type='button' class='btn btn-danger'>Delete</button></a>";
+                            ?> -->
+                            
+                            
+                        </td>
+                    </tr>
+            <?php
+                
+
+                }
+            ?>
             
-
-            }
-        ?>
-        
-    </tbody>
+        </tbody>
     </table>
 </div>
 

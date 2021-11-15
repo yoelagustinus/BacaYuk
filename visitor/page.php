@@ -13,7 +13,13 @@
 
                 require '../config.php';
                 
-                $cursor = $db->post->find();
+                $category_name = $_GET['CategoryName'];
+                
+                $content = $db->post->find([
+                    'category' => $category_name
+                ]);
+                
+                
             ?>
 
             <!-- konten -->
@@ -44,15 +50,14 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                    </center>
-                    
+                    </center>    
                 </div>
                 <center>
-                    <h1 class="text-capitalize">Home</h1>
+                    <h1 class="text-capitalize"><?php echo $category_name?></h1>
                 </center>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <?php
-                        foreach($cursor as $post){
+                        foreach($content as $post){
                             $id_content = $post->_id;
                     
                     ?>  

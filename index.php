@@ -18,7 +18,6 @@
         $email = $_POST['email']; 
         $password = $_POST['password'];
        
-        echo "$email<br>$hashed_password";
         
         $user = $db->users->findOne([
             'email' => $email,
