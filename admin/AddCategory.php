@@ -3,6 +3,17 @@
     require '../config.php';
     require 'ControllerAdmin.php';
 
+    if (isset($_SESSION['success'])) {
+        
+        echo '<div class="alert alert-success d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+            <div>
+            '.$_SESSION['success'].'
+            </div>
+        </div>';
+        unset($_SESSION["success"]);
+    }
+
     if(isset($_POST['create'])){
         $data = [
             'category' => $_POST['category'],
@@ -12,7 +23,7 @@
         $insertOneResult = $db->category->insertOne($data);
              
         $_SESSION['success'] = "category '" .  $_POST['category'] . "' berhasil dibuat";
-        header("Location: index.php");
+        header("Location: AddCategory.php");
     }
 
     if(isset($_POST['delete'])){
@@ -23,7 +34,7 @@
         ]);
     
         $_SESSION['success'] = "Category telah Berhasil dihapus";
-        header("Location: index.php");
+        header("Location: AddCategory.php");
     }
 
 ?>
