@@ -62,7 +62,8 @@
                     <td><?php echo $user->type ?></td>
                     <td>
                         <?php echo "<a href='EditUser.php?UserId=$user_id&'><button type='button' class='btn btn-primary'>Edit</button></a>"; ?>
-                        <br><br>
+                    </td>
+                    <td>
                         <form method="POST" action="">
                             <div class="form-group">
                                 <input type="hidden" value="<?php echo $user_id; ?>" class="form-control" name="user_id" id="user_id">
