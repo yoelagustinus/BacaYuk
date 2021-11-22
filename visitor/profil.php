@@ -4,9 +4,7 @@
             include 'headerVisitor.php';
             require '../config.php';
             include 'ControllerVisitor.php';
-
-            $email = $_SESSION['email'];
-            echo $email;
+            
         ?>
         <div class="container p-2">
             <h4 class="mb-2">Profil Anda</h4>
