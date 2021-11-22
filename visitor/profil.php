@@ -17,8 +17,8 @@
             </div>    
             <div class="card" style="width: 50rem; height: 10rem;">
                 <div class="card-body">
-                    <h4 class="mb-2">yumi</h4>
-                    <p class="mb-4">yumi@gmail.com</p>
+                    <h4 class="mb-2"><?php echo $user->name ?></h4>
+                    <p class="mb-4"><?php echo $user->email ?></p>
                     <a href="../logout.php" role="button" class="btn btn-primary btn-sm" style="width: 10rem;">Logout</a> 
                 </div>
             </div>    
