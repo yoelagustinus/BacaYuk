@@ -5,8 +5,7 @@
         ?>
         <div class="container p-2">
             <h4 class="mb-2">Profil Anda</h4>
-            <div class="card bg-success" style="width: 50rem; height: 10rem;">
-                <a href="changeEmail.php" class="text-decoration-none text-white p-2 d-flex justify-content-end">Edit Profil</a>
+            <div class="card bg-success" style="width: 50rem;">
                 <div class="card-body">
                     <img src="../images/profil.png" class="rounded-circle" width="100" height="100">
                 </div>
