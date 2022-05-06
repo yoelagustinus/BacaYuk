@@ -21,7 +21,7 @@
         ];
         
         $insertOneResult = $db->category->insertOne($data);
-             
+        
         $_SESSION['success'] = "category '" .  $_POST['category'] . "' berhasil dibuat";
         header("Location: AddCategory.php");
     }
